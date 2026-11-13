@@ -1,0 +1,62 @@
+/* 한양소재 리뉴얼 R2 · 후보 공통 기반 (후보별 c1~c5.css가 덮어씀) */
+@font-face{font-family:"Pretendard";src:url("/hanyang-renewal-3-designs/assets/PretendardVariable.woff2") format("woff2-variations");font-weight:100 900;font-display:swap}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:"Pretendard",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--ink,#121513);background:var(--bg,#fff);line-height:1.6;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--focus,#2f7a45);outline-offset:3px}
+.skip-link{position:absolute;left:12px;top:-60px;z-index:100;background:#111;color:#fff;padding:10px 14px;border-radius:4px;text-decoration:none}
+.skip-link:focus{top:12px}
+.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:min(1280px,calc(100% - 2*var(--gutter,40px)));margin-inline:auto}
+:root{--gutter:40px}
+@media (max-width:720px){:root{--gutter:20px}}
+.num{font-variant-numeric:tabular-nums}
+
+/* header */
+.site-header{position:relative;z-index:30;background:var(--header-bg,#fff);color:var(--header-ink,inherit)}
+.site-header .bar{display:flex;align-items:center;gap:24px;height:var(--header-h,84px)}
+.brand{display:inline-flex;align-items:center;flex:none}
+.brand img{height:38px;width:auto}
+.brand .brand-plate{background:#fff;padding:6px 10px;border-radius:2px}
+.gnb{display:flex;gap:4px;margin-inline:auto}
+.gnb>li{position:relative}
+.gnb>li>a{display:block;padding:10px 16px;text-decoration:none;font-weight:600;font-size:16px;letter-spacing:-.01em}
+.gnb .sub{position:absolute;left:8px;top:100%;min-width:180px;padding:10px 0;background:#fff;color:#121513;box-shadow:0 18px 40px rgba(0,0,0,.12);opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .18s,transform .18s,visibility .18s}
+.gnb>li:hover .sub,.gnb>li:focus-within .sub{opacity:1;visibility:visible;transform:none}
+.gnb .sub a{display:block;padding:7px 18px;text-decoration:none;font-size:14px;color:#3b403c}
+.gnb .sub a:hover,.gnb .sub a:focus-visible{color:#000;background:#f3f1ec}
+.util{display:flex;gap:16px;font-size:11px;letter-spacing:.06em;font-weight:500}
+.util a{text-decoration:none;opacity:.75}
+.util a:hover{opacity:1}
+.menu-btn{display:none;margin-left:auto;background:none;border:1px solid currentColor;border-radius:999px;padding:8px 16px;font-weight:600;cursor:pointer}
+@media (max-width:1080px){.gnb,.util{display:none}.menu-btn{display:inline-flex}}
+dialog.mmenu{width:min(560px,100vw);max-width:100vw;height:100dvh;max-height:100dvh;margin:0 0 0 auto;padding:0;border:0;background:#fff;color:#121513}
+dialog.mmenu::backdrop{background:rgba(10,12,10,.45)}
+.mmenu .top{display:flex;justify-content:space-between;align-items:center;padding:20px var(--gutter);border-bottom:1px solid #e3e0d8}
+.mmenu .top button{background:none;border:0;font-weight:600;cursor:pointer;padding:8px}
+.mmenu .groups{padding:12px var(--gutter) 40px;display:grid;gap:22px}
+.mmenu h2{font-size:15px;margin-bottom:6px}
+.mmenu .groups a{display:inline-block;margin:3px 14px 3px 0;font-size:14px;color:#3b403c;text-decoration:none;padding:4px 0}
+
+/* footer */
+.site-footer{background:var(--footer-bg,#121513);color:var(--footer-ink,#d9dcd9);font-size:14px}
+.site-footer .wrap{padding:56px 0 40px}
+.f-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-start}
+.f-links{display:flex;flex-wrap:wrap;gap:6px 22px}
+.f-links a{text-decoration:none}
+.f-links a:hover{text-decoration:underline}
+.f-info{margin-top:28px;display:grid;gap:4px;opacity:.8}
+.f-copy{margin-top:28px;font-size:11px;letter-spacing:.04em;opacity:.6}
+
+/* utility */
+.concept-note{font-size:11px;letter-spacing:.02em;opacity:.7}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
+.site-header .bar>nav[aria-label="주 메뉴"]{flex:1;display:flex;justify-content:center}
+.site-header .gnb{margin:0}
+@media (max-width:1080px){.site-header .bar>nav[aria-label="주 메뉴"]{display:none}}

@@ -1,0 +1,33 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>한양소재 · 메인 후보 1~5 비교</title><link rel="icon" href="data:,">
+<style>
+@font-face{font-family:"Pretendard";src:url("/hanyang-renewal-3-designs/assets/PretendardVariable.woff2") format("woff2-variations");font-weight:100 900}
+*{box-sizing:border-box}html,body{margin:0;height:100%}body{font-family:Pretendard,system-ui,sans-serif;background:#1b1d1c;color:#eee;display:flex;flex-direction:column}
+.tb{flex:none;display:flex;align-items:center;gap:16px;height:60px;padding:0 16px;background:#111312;border-bottom:1px solid #2c2f2d;overflow-x:auto;white-space:nowrap}
+.tb .t{font-weight:700;font-size:14px;margin-right:4px}.tb .t small{display:block;font-weight:400;font-size:11px;color:#9aa09c}
+.tb nav{display:flex;gap:4px}
+.tb nav a{display:flex;flex-direction:column;justify-content:center;height:44px;padding:0 14px;border-radius:6px;text-decoration:none;color:#c9ceca;font-size:12px;line-height:1.25}
+.tb nav a b{font-size:13px;color:#fff}
+.tb nav a:hover{background:#232624}
+.tb nav a[aria-current=page]{background:#fff;color:#333}.tb nav a[aria-current=page] b{color:#111}
+.tb .act{margin-left:auto;display:flex;gap:8px}
+.tb .act a{color:#fff;font-size:12px;text-decoration:none;border:1px solid #3a3e3b;border-radius:6px;padding:8px 12px}
+.tb .act a:hover{background:#232624}
+.tb .w{display:flex;gap:2px}.tb .w button{background:#232624;color:#ddd;border:0;font:inherit;font-size:12px;padding:8px 10px;border-radius:6px;cursor:pointer}.tb .w button[aria-pressed=true]{background:#fff;color:#111}
+main{flex:1;display:flex;justify-content:center;background:#2a2d2b;min-height:0}
+iframe{border:0;width:100%;height:100%;background:#fff;transition:width .3s}
+:focus-visible{outline:2px solid #7fc495;outline-offset:2px}
+</style></head><body>
+<header class="tb" aria-label="후보 비교 도구"><div class="t">한양소재 메인 리뉴얼<small>후보 1~5 · 2026.11 · 원본 시안 보존</small></div>
+<nav aria-label="후보 선택"><a href="?c=1" data-c="1" data-src="/hanyang-renewal-3-designs/r2/c1.html"><b>후보 1</b><span>블루 콘트라스트</span></a><a href="?c=2" data-c="2" data-src="/hanyang-renewal-3-designs/r2/c2.html"><b>후보 2</b><span>와이드 시네마</span></a><a href="?c=3" data-c="3" data-src="/hanyang-renewal-3-designs/r2/c3.html"><b>후보 3</b><span>파트 앤 매터리얼</span></a><a href="?c=4" data-c="4" data-src="/hanyang-renewal-3-designs/r2/c4.html"><b>후보 4</b><span>웜 레이어</span></a><a href="?c=5" data-c="5" data-src="/hanyang-renewal-3-designs/r2/c5.html"><b>후보 5</b><span>테크니컬 인덱스</span></a></nav>
+<div class="w" role="group" aria-label="미리보기 폭"><button type="button" data-w="100%" aria-pressed="true">데스크톱</button><button type="button" data-w="390px" aria-pressed="false">모바일</button></div>
+<div class="act"><a id="solo" href="/hanyang-renewal-3-designs/r2/c1.html" target="_blank" rel="noopener">단독 보기 ↗</a><a href="/hanyang-renewal-3-designs/r2/notes.html" target="_blank" rel="noopener">작업 메모</a><a href="/hanyang-renewal-3-designs/?v=1" target="_blank" rel="noopener">이전 3안</a></div></header>
+<main><iframe id="pv" title="후보 미리보기" src="/hanyang-renewal-3-designs/r2/c1.html"></iframe></main>
+<script>
+(function(){var links=[].slice.call(document.querySelectorAll('.tb nav a')),pv=document.getElementById('pv'),solo=document.getElementById('solo');
+function go(n,push){var a=links.find(function(x){return x.dataset.c==n})||links[0];links.forEach(function(x){x.toggleAttribute('aria-current',x===a);if(x===a)x.setAttribute('aria-current','page');});pv.src=a.dataset.src;solo.href=a.dataset.src;pv.title='후보 '+a.dataset.c+' 미리보기';document.title='후보 '+a.dataset.c+' · 한양소재 메인 리뉴얼';if(push)history.pushState({c:a.dataset.c},'','?c='+a.dataset.c);}
+links.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();go(a.dataset.c,true);});});
+addEventListener('popstate',function(){go(new URLSearchParams(location.search).get('c')||1,false);});
+go(new URLSearchParams(location.search).get('c')||1,false);
+document.querySelectorAll('.w button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.w button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});pv.style.width=b.dataset.w;});});})();
+</script></body></html>

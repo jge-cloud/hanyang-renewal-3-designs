@@ -1,0 +1,113 @@
+/* 후보 3 · 파트 앤 매터리얼 — 실제 부품 탐색과 소재 단면 */
+.c3{--ink:#121513;--ink2:#3B403C;--mute:#7C827D;--line:#DAD7CF;--stone:#F3F1EC;--green:#2F7A45;--focus:#2F7A45;--header-bg:#fff;--footer-bg:#121513;--footer-ink:#C8CCC8;--header-h:84px}
+.c3 .site-header{border-bottom:1px solid var(--line)}
+.c3 .eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--green);margin-bottom:16px;text-transform:uppercase}
+.c3 h2{font-size:clamp(30px,3.2vw,48px);line-height:1.22;letter-spacing:-.035em;font-weight:700}
+/* pill buttons */
+.c3 .pill{display:inline-flex;align-items:center;gap:12px;padding:13px 22px;border:1px solid var(--ink);border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;transition:background .2s,color .2s}
+.c3 .pill::after{content:"→"}
+.c3 .pill:hover{background:var(--ink);color:#fff}
+.c3 .pill-light{border-color:#fff;color:#fff}.c3 .pill-light:hover{background:#fff;color:var(--ink)}
+.c3 .pill-ghost{border-color:rgba(255,255,255,.35);color:#fff}.c3 .pill-ghost:hover{background:rgba(255,255,255,.1);color:#fff}
+.c3 .pill-ghost-dark{border-color:var(--line)}
+.c3 .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+
+/* hero: 왼쪽 메시지, 오른쪽 부품 탐색 */
+.c3 .hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);min-height:760px}
+.c3 .hero-text{background:var(--ink);color:#fff;padding:96px 64px 80px max(var(--gutter),calc((100vw - 1280px)/2));display:flex;flex-direction:column;justify-content:center}
+.c3 .hero h1{font-size:clamp(36px,4.4vw,64px);line-height:1.14;letter-spacing:-.045em;font-weight:800}
+.c3 .hero .lead{margin-top:28px;font-size:18px;line-height:1.7;color:rgba(255,255,255,.78);max-width:460px}
+.c3 .hero .eyebrow{color:#7FC495}
+.c3 .explorer{background:#fff;display:grid;grid-template-rows:1fr auto;padding:48px max(var(--gutter),calc((100vw - 1280px)/2)) 40px 56px}
+.c3 .stage{display:grid;grid-template-columns:1fr 240px;gap:32px;align-items:center;min-height:380px}
+.c3 .stage img{max-height:300px;width:auto;max-width:100%;justify-self:center;object-fit:contain;transition:opacity .25s,transform .35s}
+.c3 .stage.swap img{opacity:0;transform:translateY(8px) scale(.98)}
+.c3 .stage figcaption{display:grid;gap:8px;border-left:2px solid var(--ink);padding-left:22px}
+.c3 .st-type{font-size:13px;font-weight:700;color:var(--green);letter-spacing:.06em}
+.c3 .stage strong{font-size:26px;letter-spacing:-.02em}
+.c3 #st-struct{font-size:14px;color:var(--ink2)}
+.c3 #st-link{font-size:14px;font-weight:600;margin-top:6px}
+.c3 .thumbs{display:grid;grid-template-columns:repeat(9,1fr);gap:8px;border-top:1px solid var(--line);padding-top:20px}
+.c3 .thumb{width:100%;height:100%;display:grid;gap:6px;justify-items:center;align-content:start;padding:12px 6px 10px;background:var(--stone);border:1px solid transparent;cursor:pointer;transition:border-color .2s,background .2s}
+.c3 .thumb img{height:44px;width:100%;object-fit:contain}
+.c3 .thumb span{font-size:10px;font-weight:700;letter-spacing:.02em;text-align:center;line-height:1.3}
+.c3 .thumb small{font-size:10px;color:var(--green);font-weight:700}
+.c3 .thumb:hover{border-color:var(--line);background:#fff}
+.c3 .thumb[aria-pressed=true]{background:#fff;border-color:var(--ink)}
+
+/* anatomy */
+.c3 section{padding:128px 0}
+.c3 .anatomy{background:#fff}
+.c3 .ana-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:center}
+.c3 .ana-copy>p{margin-top:24px;color:var(--ink2);font-size:17px;line-height:1.75}
+.c3 .layers{margin-top:32px;border-top:2px solid var(--ink)}
+.c3 .layers button{display:grid;grid-template-columns:140px 1fr;width:100%;text-align:left;padding:18px 0;border:0;border-bottom:1px solid var(--line);background:none;cursor:pointer}
+.c3 .layers b{font-size:18px}
+.c3 .layers span{color:var(--mute);font-size:15px}
+.c3 .layers button:hover b,.c3 .layers button[aria-pressed=true] b{color:var(--green)}
+.c3 .raw{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.c3 .raw div{background:var(--stone);padding:16px}
+.c3 .raw dt{font-size:12px;color:var(--mute);font-weight:600}
+.c3 .raw dd{margin-top:4px;font-weight:600;font-size:15px}
+.c3 .ana-fig{position:relative;background:var(--stone);padding:40px 24px 56px}
+.c3 .nps-svg{width:100%;height:auto;display:block}
+.c3 .nps-svg g{transition:opacity .3s,transform .4s}
+.c3 .ana-fig.hl-film .layer-core{opacity:.35}
+.c3 .ana-fig.hl-core .layer-film{opacity:.15;transform:translateY(-18px)}
+.c3 .lbl{position:absolute;font-weight:700;font-size:16px;padding-left:28px}
+.c3 .lbl::before{content:"";position:absolute;left:0;top:50%;width:20px;height:1px;background:var(--ink)}
+.c3 .lbl-film{left:62%;top:15%}.c3 .lbl-core{left:66%;top:78%}
+
+/* types tabs */
+.c3 .types{background:var(--stone)}
+.c3 .types-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:40px}
+.c3 .tabs{display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.c3 .tabs button{padding:14px 22px;border:0;background:none;font-weight:700;font-size:17px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px;color:var(--mute)}
+.c3 .tabs button[aria-selected=true]{color:var(--ink);border-color:var(--green)}
+.c3 .tpanel{display:grid;grid-template-columns:1fr 1fr;gap:28px 56px;padding:40px 0 0}
+.c3 .tp-head h3{font-size:34px;letter-spacing:-.03em}
+.c3 .tp-head small{font-size:15px;color:var(--mute);font-weight:500;margin-left:8px}
+.c3 .tp-head p{margin-top:8px;font-size:17px;color:var(--ink2)}
+.c3 .comp{display:flex;height:48px;align-self:end;background:#fff}
+.c3 .comp span{width:var(--w);display:flex;align-items:center;padding:0 12px;font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden}
+.c3 .comp .s0{background:var(--ink);color:#fff}.c3 .comp .s1{background:#7A5137;color:#fff}.c3 .comp .s2{background:#B9D9C2}
+.c3 .tp-spec{display:grid;grid-template-columns:140px 1fr;gap:0;border-top:1px solid var(--line)}
+.c3 .tp-spec div{display:contents}
+.c3 .tp-spec dt,.c3 .tp-spec dd{padding:14px 0;border-bottom:1px solid var(--line)}
+.c3 .tp-spec dt{color:var(--mute);font-size:14px}
+.c3 .tp-parts{display:flex;flex-wrap:wrap;gap:10px}
+.c3 .tp-parts li{background:#fff;padding:14px 14px 10px;display:grid;justify-items:center;gap:6px;min-width:150px}
+.c3 .tp-parts img{height:70px;width:auto;object-fit:contain}
+.c3 .tp-parts span{font-size:11px;font-weight:700}
+.c3 .tp-parts .none{color:var(--mute);font-size:14px;align-content:center}
+.c3 .tpanel .pill{justify-self:start;align-self:start}
+
+/* plant */
+.c3 .plant-grid{display:grid;grid-template-columns:432fr 213fr 520fr;gap:16px 40px;align-items:end}
+.c3 .pl-copy{padding-left:16px}
+.c3 .pl-copy h2{font-size:clamp(26px,2.4vw,34px)}
+.c3 .pl-copy>p:not(.eyebrow){margin-top:16px;color:var(--ink2)}
+.c3 .util-row{padding:0 0 72px}
+.c3 .ur{display:flex;flex-wrap:wrap;border-top:1px solid var(--line)}
+.c3 .ur a{flex:1 1 220px;padding:18px 20px 18px 0;text-decoration:none;font-size:15px;border-bottom:1px solid var(--line)}
+.c3 .ur b{color:var(--green);margin-right:8px;font-size:12px;letter-spacing:.06em}
+.c3 .ur time{color:var(--mute);font-size:13px;margin-left:6px}
+.c3 .ur a:hover{text-decoration:underline}
+.c3 .f-slogan{margin-top:14px;font-size:13px;opacity:.7}
+
+@media (max-width:1080px){
+ .c3 .hero{grid-template-columns:1fr}
+ .c3 .hero-text{padding:72px var(--gutter)}
+ .c3 .explorer{padding:32px var(--gutter)}
+ .c3 .stage{grid-template-columns:1fr;min-height:0}
+ .c3 .thumbs{grid-template-columns:repeat(5,1fr)}
+ .c3 .ana-grid,.c3 .tpanel{grid-template-columns:1fr}
+ .c3 .plant-grid{grid-template-columns:2fr 1fr}
+ .c3 .pl-copy{grid-column:1/-1;padding:0}
+}
+@media (max-width:640px){.c3 section{padding:88px 0}.c3 .thumbs{grid-template-columns:repeat(3,1fr)}.c3 .raw{grid-template-columns:1fr}.c3 .layers button{grid-template-columns:1fr}.c3 .types-head{flex-direction:column;align-items:flex-start}}
+.c3 .hero{padding:0;min-height:640px}
+.c3 .tpanel[hidden]{display:none}
+html:not(.js) .c3 .tpanel[hidden]{display:grid}
+.c3 .stage img{height:180px;width:auto;max-height:none}
+@media (max-width:640px){.c3 .stage img{height:140px}}
