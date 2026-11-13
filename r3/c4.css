@@ -1,0 +1,87 @@
+/* R3 후보 4 · 웜 레이어 — 원료 → 소재 → 부품의 흐름 */
+.c4{--ink:#2A2623;--ink2:#4D4640;--mute:#857B71;--line:#DDD4C6;--stone:#F1ECE3;--sand:#E7DDCE;--rust:#B8400F;--focus:#B8400F;--bg:#F1ECE3;--header-bg:#F1ECE3;--footer-bg:#2A2623;--footer-ink:#D6CDC1;--header-h:80px}
+.c4 h2{font-size:clamp(30px,3.2vw,46px);line-height:1.2;letter-spacing:-.035em;font-weight:700}
+.c4 .btn{display:inline-flex;align-items:center;gap:10px;background:var(--rust);color:#fff;padding:15px 24px;font-weight:700;font-size:15px;text-decoration:none;border-radius:4px}
+.c4 .btn:hover{background:#8E300B}
+.c4 .btn-text{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;text-decoration:none;color:var(--ink)}
+.c4 .btn-text::after{content:"";width:8px;height:8px;border-top:2px solid var(--ink);border-right:2px solid var(--ink);transform:rotate(45deg);transition:transform .2s}
+.c4 .btn-text:hover::after{transform:translateX(3px) rotate(45deg)}
+
+/* hero: 크기가 줄어드는 세 장면이 하나의 흐름 */
+.c4 .hero{padding:56px 0 96px}
+.c4 .hero-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:end;margin-bottom:48px}
+.c4 .hero h1{font-size:clamp(38px,4.6vw,68px);line-height:1.12;letter-spacing:-.045em;font-weight:800}
+.c4 .hero .lead{font-size:18px;line-height:1.75;color:var(--ink2)}
+.c4 .chain{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,3.4fr) minmax(0,2.6fr);gap:0;padding-left:max(var(--gutter),calc((100vw - 1280px)/2));align-items:end}
+.c4 .chain li{position:relative;display:grid;gap:14px}
+.c4 .chain figure{display:grid;place-items:center;overflow:hidden}
+.c4 .c-raw figure{height:min(52vw,560px)}
+.c4 .c-raw img{width:100%;height:100%;object-fit:cover}
+.c4 .c-sheet figure{height:min(36vw,400px);background:var(--sand);padding:24px}
+.c4 .c-sheet .nps-svg{width:100%;height:auto}
+.c4 .c-part figure{height:min(26vw,290px);background:#fff;padding:20px}
+.c4 .chain p{font-size:14px;color:var(--ink2);padding-right:20px}
+.c4 .chain b{display:block;font-size:20px;color:var(--ink);letter-spacing:-.02em}
+.c4 .chain em{font-style:normal;font-size:11px;color:var(--mute);margin-left:6px}
+.c4 .chain li+li::before{content:"";position:absolute;left:-14px;top:calc(50% - 40px);width:28px;height:28px;border-radius:50%;background:var(--rust);z-index:2;box-shadow:0 0 0 6px var(--stone)}
+.c4 .chain li+li::after{content:"→";position:absolute;left:-14px;top:calc(50% - 40px);width:28px;height:28px;display:grid;place-items:center;color:#fff;font-size:14px;z-index:3}
+html.js:not(.reduced) .c4 .chain li{transition:opacity .6s,transform .6s}
+html.js:not(.reduced) .c4 .chain:not(.is-in) li+li{opacity:.0;transform:translateX(-24px)}
+html.js:not(.reduced) .c4 .chain li:nth-child(3){transition-delay:.18s}
+
+/* process: 도형 + 짧은 설명, 진행선 */
+.c4 .process{background:#fff;padding:104px 0}
+.c4 .pr-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:48px}
+.c4 .steps{display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.c4 .steps::before,.c4 .steps::after{content:"";position:absolute;left:0;right:0;top:118px;height:2px;background:var(--line)}
+.c4 .steps::after{background:var(--rust);transform-origin:left;transform:scaleX(var(--fill,1))}
+.c4 .step{padding-right:24px;display:grid;gap:6px;align-content:start}
+.c4 .ic{display:block;width:120px;height:90px;color:var(--ink);margin-bottom:38px}
+.c4 .ic svg{width:100%;height:100%;fill:none}
+.c4 .no{font-size:13px;font-weight:800;color:var(--mute)}
+.c4 .step.on .no{color:var(--rust)}
+.c4 .step h3{font-size:24px;letter-spacing:-.02em}
+.c4 .step p{color:var(--ink2);font-size:15px}
+
+/* traits: 큰 문장 + 짧은 설명 */
+.c4 .traits{padding:120px 0}
+.c4 .tr-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px 64px;align-items:end}
+.c4 .tr-big{font-size:clamp(40px,5vw,78px);line-height:1.08;letter-spacing:-.05em;font-weight:800}
+.c4 .tr-text{font-size:17px;line-height:1.8;color:var(--ink2)}
+.c4 .traits .btn{grid-column:2;justify-self:start}
+
+/* apps: 부품이 큰 띠 위에 */
+.c4 .apps{background:var(--sand);padding:104px 0 96px}
+.c4 .ap-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:40px}
+.c4 .ap-row{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;width:min(1280px,calc(100% - 2*var(--gutter)));margin:0 auto}
+.c4 .ap-row li{background:var(--stone);display:grid;grid-template-rows:220px auto;place-items:center;padding:16px 12px 22px}
+.c4 .ap-row img{max-height:190px;width:auto}
+.c4 .ap-row span{font-size:12px;font-weight:700;letter-spacing:.05em}
+.c4 .ind{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;margin-top:40px;padding-top:24px;border-top:2px solid var(--rust)}
+.c4 .ind-t{font-weight:800;color:var(--rust)}
+.c4 .ind p:not(.ind-t){color:var(--ink2);font-size:15px}
+
+.c4 .history{background:#fff;padding:96px 0}
+.c4 .hi-grid{display:grid;grid-template-columns:4fr 8fr;gap:56px}
+.c4 .history .src{margin:10px 0 24px;font-size:13px;color:var(--mute)}
+.c4 .hi-list li{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.c4 .hi-list li:first-child{border-top:1px solid var(--ink)}
+.c4 .hi-list time{font-weight:800}
+.c4 .hi-list span{color:var(--ink2)}
+
+.c4 .desk{padding:48px 0 64px}
+.c4 .desk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0 24px}
+.c4 .desk a{display:grid;gap:2px;padding:14px 0;border-top:1px solid var(--ink);text-decoration:none;font-weight:600}
+.c4 .desk small{font-size:12px;color:var(--mute);font-weight:600}
+.c4 .desk a:hover{color:var(--rust)}
+.c4 .f-slogan{margin-top:14px;font-size:13px;opacity:.7}
+
+@media (max-width:1080px){
+ .c4 .hero-head,.c4 .tr-grid,.c4 .hi-grid{grid-template-columns:1fr}.c4 .traits .btn{grid-column:1}
+ .c4 .chain{grid-template-columns:1fr 1fr;padding:0 var(--gutter);gap:28px 20px}.c4 .c-raw{grid-column:1/-1}
+ .c4 .c-raw figure{height:56vw}.c4 .c-sheet figure,.c4 .c-part figure{height:240px}
+ .c4 .chain li+li::before,.c4 .chain li+li::after{display:none}
+ .c4 .steps{grid-template-columns:1fr 1fr;row-gap:40px}.c4 .steps::before,.c4 .steps::after{display:none}.c4 .ic{margin-bottom:12px}
+ .c4 .ap-row{grid-template-columns:1fr 1fr}.c4 .ind{grid-template-columns:1fr}.c4 .desk-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){.c4 .chain{grid-template-columns:1fr}.c4 .c-raw figure{height:64vw}.c4 .process,.c4 .traits,.c4 .apps,.c4 .history{padding:76px 0}.c4 .ap-row li{grid-template-rows:160px auto}.c4 .ap-row img{max-height:140px}}

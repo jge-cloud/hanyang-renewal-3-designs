@@ -1,0 +1,111 @@
+/* R3 후보 1 · 블루 콘트라스트 — 컬러 면 + 실제 제품·적용 장면 */
+.c1{--blue:#1E4FE6;--blue-d:#163DB8;--navy:#0A1A3A;--sky:#E8EEFF;--ink:#0D1526;--mute:#5B6478;--line:#D5DCEB;--focus:#1E4FE6;--header-bg:#fff;--footer-bg:#0A1A3A;--footer-ink:#C9D3EA;--header-h:76px}
+.c1 .site-header{border-bottom:1px solid var(--line)}
+.c1 .eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--blue);margin-bottom:16px}
+.c1 h2{font-size:clamp(32px,3.6vw,52px);line-height:1.18;letter-spacing:-.035em;font-weight:800}
+.c1 h3{font-size:clamp(26px,2.4vw,36px);letter-spacing:-.03em;line-height:1.25}
+.c1 .btn{display:inline-flex;align-items:center;gap:14px;padding:16px 22px;font-weight:700;font-size:15px;text-decoration:none;border-radius:2px;transition:background .2s,color .2s}
+.c1 .btn::after{content:"→";transition:transform .2s}.c1 .btn:hover::after{transform:translateX(4px)}
+.c1 .btn-solid{background:#fff;color:var(--blue)}.c1 .btn-solid:hover{background:var(--navy);color:#fff}
+.c1 .products .btn-solid{background:var(--blue);color:#fff}.c1 .products .btn-solid:hover{background:var(--navy)}
+.c1 .btn-line{border:1.5px solid rgba(255,255,255,.7);color:#fff}.c1 .btn-line:hover{background:rgba(255,255,255,.12)}
+.c1 .link{display:inline-flex;gap:10px;font-weight:700;font-size:15px;text-decoration:none;color:var(--blue);border-bottom:2px solid currentColor;padding-bottom:3px}
+.c1 .link::after{content:"→"}.c1 .link.light{color:#fff}
+
+/* hero: 파랑 면 + 큰 실내 사진 */
+.c1 .hero{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);min-height:min(86vh,800px);background:var(--blue);color:#fff}
+.c1 .hero-copy{padding:96px 56px 88px max(var(--gutter),calc((100vw - 1280px)/2));display:flex;flex-direction:column;justify-content:center}
+.c1 .hero .eyebrow{color:#B9CBFF}
+.c1 .hero h1{font-size:clamp(40px,5vw,76px);line-height:1.1;letter-spacing:-.05em;font-weight:800}
+.c1 .hero .lead{margin-top:28px;font-size:clamp(17px,1.35vw,20px);line-height:1.7;color:#DCE5FF;max-width:540px}
+.c1 .actions{margin-top:40px;display:flex;flex-wrap:wrap;gap:12px}
+.c1 .hero-photo{position:relative;overflow:hidden;background:var(--navy)}
+.c1 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:30% 50%}
+.c1 .hero-photo figcaption{position:absolute;left:0;right:0;bottom:0;display:flex;flex-wrap:wrap;gap:4px 22px;padding:20px 28px;background:var(--navy);font-size:14px;font-weight:600}
+.c1 .hero-photo figcaption span+span::before{content:"";display:inline-block;width:4px;height:4px;border-radius:50%;background:#7F9BFF;margin-right:22px;vertical-align:middle}
+.c1 .hero-photo .concept-note{position:absolute;top:14px;right:16px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.4)}
+html.js:not(.reduced) .c1 .hero-photo{animation:c1wipe 1.1s cubic-bezier(.6,0,.2,1) both}
+html.js:not(.reduced) .c1 .hero-photo img{animation:c1zoom 1.6s cubic-bezier(.2,.7,.2,1) both}
+@keyframes c1wipe{from{clip-path:inset(0 0 0 100%)}to{clip-path:inset(0)}}
+@keyframes c1zoom{from{transform:scale(1.08)}to{transform:none}}
+
+/* business rows: 이미지와 설명이 맞물림 */
+.c1 .biz{padding:128px 0 0}
+.c1 .biz .wrap{margin-bottom:56px}
+.c1 .row{display:grid;align-items:center}
+.c1 .row-a{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.c1 .row-b{grid-template-columns:minmax(0,5fr) minmax(0,7fr);background:var(--navy);color:#fff}
+.c1 .row-media{position:relative;min-height:460px;display:grid;place-items:center;padding:48px}
+.c1 .row-media.sky{background:var(--sky)}
+.c1 .nps-svg{width:min(560px,100%);height:auto}
+.c1 .lbl{position:absolute;font-weight:700;font-size:15px;padding-left:26px}
+.c1 .lbl::before{content:"";position:absolute;left:0;top:50%;width:18px;height:1px;background:currentColor}
+.c1 .l1{left:62%;top:18%}.c1 .l2{left:66%;top:74%}
+.c1 .row-copy{padding:64px max(var(--gutter),calc((100vw - 1280px)/2)) 64px 72px}
+.c1 .row-b .row-copy{padding:64px 72px 64px max(var(--gutter),calc((100vw - 1280px)/2))}
+.c1 .no{font-size:14px;font-weight:700;color:var(--blue);margin-bottom:14px}
+.c1 .row-b .no{color:#9DB6FF}
+.c1 .row-copy>p:not(.no){margin:20px 0 28px;color:var(--mute);font-size:17px;line-height:1.75;max-width:440px}
+.c1 .row-b .row-copy>p:not(.no){color:#C4CFEA}
+.c1 .row-media.navy{background:#12264F;min-height:520px}
+.c1 .cluster{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;align-items:center;justify-items:center}
+.c1 .cluster img:first-child{grid-column:1/-1}
+.c1 .row-media.navy figcaption{position:absolute;left:28px;bottom:20px;font-size:12px;color:#9DB6FF;letter-spacing:.04em}
+
+/* products: 대표 제품 + 나머지 */
+.c1 .products{background:#fff;padding:128px 0}
+.c1 .pr-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,3fr);gap:24px;align-items:stretch}
+.c1 .pr-head{display:flex;flex-direction:column;gap:28px;align-items:flex-start}
+.c1 .featured{display:grid;place-items:center;align-content:center;gap:10px;background:var(--sky);padding:48px 32px;text-decoration:none;min-height:420px;transition:background .25s}
+.c1 .featured:hover{background:#DCE5FF}
+.c1 .featured img{height:auto;max-width:100%}
+.c1 .f-name{margin-top:24px;font-size:22px;font-weight:800;letter-spacing:.01em}
+.c1 .f-meta{font-size:14px;color:var(--blue);font-weight:600}
+.c1 .others{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-content:stretch}
+.c1 .others a{display:grid;justify-items:center;align-content:center;gap:4px;height:100%;padding:14px 8px;border:1px solid var(--line);text-decoration:none;transition:border-color .2s}
+.c1 .others a:hover{border-color:var(--blue)}
+.c1 .others img{height:54px;width:auto;object-fit:contain}
+.c1 .others span{font-size:11px;font-weight:700;text-align:center}
+.c1 .others small{font-size:11px;color:var(--blue);font-weight:600}
+
+/* tech: 파랑 면, 짧은 근거 */
+.c1 .tech{background:var(--blue);color:#fff;padding:120px 0}
+.c1 .tech .eyebrow{color:#B9CBFF}
+.c1 .tech-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px}
+.c1 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:36px 0 32px}
+.c1 .chips li{background:rgba(10,26,58,.35);padding:10px 14px;display:grid;gap:2px}
+.c1 .chips b{font-size:17px}.c1 .chips span{font-size:12px;color:#C9D6FF}
+.c1 .proof{border-top:1px solid rgba(255,255,255,.4)}
+.c1 .proof li{padding:22px 0;border-bottom:1px solid rgba(255,255,255,.25);display:grid;grid-template-columns:1fr auto;gap:6px 20px}
+.c1 .proof h3{font-size:19px}
+.c1 .proof p{grid-column:1;color:#DCE5FF;font-size:15px}
+.c1 .proof a{grid-row:1/3;grid-column:2;align-self:center;font-size:14px;font-weight:700;text-decoration:none;border-bottom:1px solid}
+
+.c1 .more{padding:48px 0;background:#fff}
+.c1 .more-row{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;border-top:2px solid var(--ink)}
+.c1 .more-row a{display:grid;gap:2px;padding:18px 20px 18px 0;text-decoration:none;border-bottom:1px solid var(--line)}
+.c1 .more-row a+a{padding-left:20px;border-left:1px solid var(--line)}
+.c1 .more-row small{font-size:12px;font-weight:700;color:var(--blue)}
+.c1 .more-row span{font-weight:600}.c1 .more-row a:hover span{text-decoration:underline}
+.c1 .f-slogan{margin-top:14px;font-size:13px;color:#8FA0C6}
+/* 컬러 면이 다가오며 전폭으로 펼쳐짐 */
+@media (min-width:1100px){html.js:not(.reduced) .c1 .row-b,html.js:not(.reduced) .c1 .tech{--k:clamp(0,calc(1 - var(--p,1)*3.2),1);clip-path:inset(0 calc(var(--k)*4.5vw) round calc(var(--k)*28px))}}
+
+@media (max-width:1080px){
+ .c1 .hero,.c1 .row-a,.c1 .row-b,.c1 .tech-grid{grid-template-columns:1fr}
+ .c1 .hero-copy{padding:64px var(--gutter)}
+ .c1 .hero-photo{height:440px}
+ .c1 .row-b .row-media{order:-1}
+ .c1 .row-copy,.c1 .row-b .row-copy{padding:48px var(--gutter)}
+ .c1 .pr-grid{grid-template-columns:1fr 1fr}.c1 .pr-head{grid-column:1/-1}
+ .c1 .more-row{grid-template-columns:1fr 1fr}.c1 .more-row a+a{border-left:0;padding-left:0}
+}
+@media (max-width:640px){
+ .c1 .hero-photo{height:360px}.c1 .row-media{min-height:300px;padding:28px}.c1 .row-media.navy{min-height:360px}
+ .c1 .pr-grid{grid-template-columns:1fr}.c1 .featured{min-height:300px}
+ .c1 .biz,.c1 .products,.c1 .tech{padding:84px 0}.c1 .biz{padding-bottom:0}
+ .c1 .more-row{grid-template-columns:1fr}
+}
+.c1 .cluster{gap:24px 32px}
+.c1 .cluster img{max-height:150px;width:auto}
+.c1 .cluster img:first-child{max-height:150px}
